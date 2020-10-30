@@ -106,13 +106,13 @@ def response_structure():
         "hola" : {
             "texto" : "¿Cómo puedo ayudarte?",
             "opcion" : [{
-                "title" : '\nFacial',
+                "title" : 'Facial',
                 "payload" : "OPC1"
             }, {
-                "title" : '\nManicure',
+                "title" : 'Manicure',
                 "payload" : "OPC2"
             },{
-                "title" : '\nPedicure',
+                "title" : 'Pedicure',
                 "payload" : "OPC3"
             },{
                 "title" : "Capilar",
@@ -142,7 +142,20 @@ def response_structure():
             }]            
         },
         "Facial" : {
-                "texto" : "Facial",
+                "texto" : "Que desea realizar?",
+                "opcion" : [{
+                    "title" : 'Comprar productos',
+                    "payload" : "OPC11"
+                },{
+                    "title" : 'Ver tratamientos',
+                    "payload" : "OPC12"
+                },{
+                    "title" : 'Contactar asesor',
+                    "payload" : "OPC11"
+                }]
+        },
+        'Manicure' : {
+                "texto" : "Que desea realizar?",
                 "opcion" : [{
                     "title" : 'Comprar productos',
                     "payload" : "OPC11"
@@ -154,24 +167,44 @@ def response_structure():
                     "payload" : "OPC11"
                 }]
         },
-        'Contactar con un ase...' : {
-            "texto" : "¿Cómo puedo ayudarte?",
-            "opcion" : [{
-                "title" : 'Facial',
-                "payload" : "OPC1"
-            }, {
-                "title" : 'Manicure',
-                "payload" : "OPC2"
-            },{
-                "title" : 'Pedicure',
-                "payload" : "OPC3"
-            },{
-                "title" : "Capilar",
-                "payload" : "OPC4"
-            },{
-                "title" : 'Corporal',
-                "payload" : "OPC5"
-            }]            
+        "Pedicure" : {
+                "texto" : "Que desea realizar?",
+                "opcion" : [{
+                    "title" : 'Comprar productos',
+                    "payload" : "OPC11"
+                },{
+                    "title" : 'Ver tratamientos',
+                    "payload" : "OPC12"
+                },{
+                    "title" : 'Contactar asesor',
+                    "payload" : "OPC11"
+                }]
+        },
+        "Capilar" : {
+                "texto" : "Que desea realizar?",
+                "opcion" : [{
+                    "title" : 'Comprar productos',
+                    "payload" : "OPC11"
+                },{
+                    "title" : 'Ver tratamientos',
+                    "payload" : "OPC12"
+                },{
+                    "title" : 'Contactar asesor',
+                    "payload" : "OPC11"
+                }]
+        },
+        "Corporal" : {
+                "texto" : "Que desea realizar?",
+                "opcion" : [{
+                    "title" : 'Comprar productos',
+                    "payload" : "OPC11"
+                },{
+                    "title" : 'Ver tratamientos',
+                    "payload" : "OPC12"
+                },{
+                    "title" : 'Contactar asesor',
+                    "payload" : "OPC11"
+                }]
         }
     }
     return ddic_response
