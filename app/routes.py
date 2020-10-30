@@ -52,7 +52,15 @@ def sender_graph(object_message):
             },
             "message": {
                 "text": object_message['message'], #"¿Como podemos ayudarte?"
-                "quick_replies": object_message['quick_replies']
+                "quick_replies": object_message['quick_replies'],
+                #"attachments":[
+                #    {
+                #      "type":"fallback",
+                #      "payload":"null",
+                #    	"title":"google",
+                #    	"URL":"www.google.com",
+                #    }
+                #    ]
                 #"quick_replies": [
                 #    {
                 #        "content_type":"text",
@@ -104,105 +112,162 @@ def response_structure():
 
     ddic_response = {
         "hola" : {
-            "texto" : "¿Cómo puedo ayudarte?",
+            "texto" : "¿Cómo puedo ayudarte? \n\n1) Facial \n2) Manicure \n3) Pedicure \n4) Capilar \n5) Corporal",
             "opcion" : [{
-                "title" : 'Facial',
+                "title" : 'OPC 1',
                 "payload" : "OPC1"
             }, {
-                "title" : 'Manicure',
+                "title" : 'OPC 2',
                 "payload" : "OPC2"
             },{
-                "title" : 'Pedicure',
+                "title" : 'OPC 3',
                 "payload" : "OPC3"
             },{
-                "title" : "Capilar",
+                "title" : "OPC 4",
                 "payload" : "OPC4"
             },{
-                "title" : 'Corporal',
+                "title" : 'OPC 5',
+                "payload" : "OPC5"
+            }]
+        },
+        "HOLA" : {
+            "texto" : "¿Cómo puedo ayudarte? \n\n1) Facial \n2) Manicure \n3) Pedicure \n4) Capilar \n5) Corporal",
+            "opcion" : [{
+                "title" : 'OPC 1',
+                "payload" : "OPC1"
+            }, {
+                "title" : 'OPC 2',
+                "payload" : "OPC2"
+            },{
+                "title" : 'OPC 3',
+                "payload" : "OPC3"
+            },{
+                "title" : "OPC 4",
+                "payload" : "OPC4"
+            },{
+                "title" : 'OPC 5',
                 "payload" : "OPC5"
             }]
         },
         'Quiero chatear con alguien.' : {
-            "texto" : "¿Cómo puedo ayudarte?",
+            "texto" : "¿Cómo puedo ayudarte? \n\n1) Facial \n2) Manicure \n3) Pedicure \n4) Capilar \n5) Corporal",
             "opcion" : [{
-                "title" : 'Facial',
+                "title" : 'OPC 1',
                 "payload" : "OPC1"
             }, {
-                "title" : 'Manicure',
+                "title" : 'OPC 2',
                 "payload" : "OPC2"
             },{
-                "title" : 'Pedicure',
+                "title" : 'OPC 3',
                 "payload" : "OPC3"
             },{
-                "title" : "Capilar",
+                "title" : "OPC 4",
                 "payload" : "OPC4"
             },{
-                "title" : 'Corporal',
+                "title" : 'OPC 5',
                 "payload" : "OPC5"
             }]            
         },
-        "Facial" : {
-                "texto" : "Que desea realizar?",
+        'Quiero más información sobre el negocio.' : {
+            "texto" : "¿Cómo puedo ayudarte? \n\n1) Facial \n2) Manicure \n3) Pedicure \n4) Capilar \n5) Corporal",
+            "opcion" : [{
+                "title" : 'OPC 1',
+                "payload" : "OPC1"
+            }, {
+                "title" : 'OPC 2',
+                "payload" : "OPC2"
+            },{
+                "title" : 'OPC 3',
+                "payload" : "OPC3"
+            },{
+                "title" : "OPC 4",
+                "payload" : "OPC4"
+            },{
+                "title" : 'OPC 5',
+                "payload" : "OPC5"
+            }]            
+        },
+        'Quiero más información sobre ti.' : {
+        "texto" : "¿Cómo puedo ayudarte? \n\n1) Facial \n2) Manicure \n3) Pedicure \n4) Capilar \n5) Corporal",
+            "opcion" : [{
+                "title" : 'OPC 1',
+                "payload" : "OPC1"
+            }, {
+                "title" : 'OPC 2',
+                "payload" : "OPC2"
+            },{
+                "title" : 'OPC 3',
+                "payload" : "OPC3"
+            },{
+                "title" : "OPC 4",
+                "payload" : "OPC4"
+            },{
+                "title" : 'OPC 5',
+                "payload" : "OPC5"
+            }]            
+        },
+        "OPC 1" : {
+                "texto" : "Facial : ¿Que desea realizar? \n\n1.1) Productos \n1.2) Tratamientos \n1.3) Asesoria",
                 "opcion" : [{
-                    "title" : 'Comprar productos',
+                    "title" : 'OPC 1.1',
                     "payload" : "OPC11"
                 },{
-                    "title" : 'Ver tratamientos',
+                    "title" : 'OPC 1.2',
                     "payload" : "OPC12"
                 },{
-                    "title" : 'Contactar asesor',
+                    "title" : 'OPC 1.3',
                     "payload" : "OPC11"
                 }]
         },
-        'Manicure' : {
-                "texto" : "Que desea realizar?",
+        "OPC 2" : {
+                "texto" : "Manicure : ¿Que desea realizar? \n\n2.1) Productos \n2.2) Tratamientos \n2.3) Asesoria",
                 "opcion" : [{
-                    "title" : 'Comprar productos',
+                    "title" : 'OPC 2.1',
                     "payload" : "OPC11"
                 },{
-                    "title" : 'Consultar tratamientos',
+                    "title" : 'OPC 2.2',
                     "payload" : "OPC12"
                 },{
-                    "title" : 'Contactar con un asesor',
+                    "title" : 'OPC 2.3',
                     "payload" : "OPC11"
                 }]
         },
-        "Pedicure" : {
-                "texto" : "Que desea realizar?",
+        "OPC 3" : {
+                "texto" : "Pedicure : ¿Que desea realizar? \n\n3.1) Productos \n3.2) Tratamientos \n3.3) Asesoria",
                 "opcion" : [{
-                    "title" : 'Comprar productos',
+                    "title" : 'OPC 3.1',
                     "payload" : "OPC11"
                 },{
-                    "title" : 'Ver tratamientos',
+                    "title" : 'OPC 3.2',
                     "payload" : "OPC12"
                 },{
-                    "title" : 'Contactar asesor',
+                    "title" : 'OPC 3.3',
                     "payload" : "OPC11"
                 }]
         },
-        "Capilar" : {
-                "texto" : "Que desea realizar?",
+        "OPC 4" : {
+                "texto" : "Capilar : ¿Que desea realizar? \n\n4.1) Productos \n4.2) Tratamientos \n4.3) Asesoria",
                 "opcion" : [{
-                    "title" : 'Comprar productos',
+                    "title" : 'OPC 4.1',
                     "payload" : "OPC11"
                 },{
-                    "title" : 'Ver tratamientos',
+                    "title" : 'OPC 4.2',
                     "payload" : "OPC12"
                 },{
-                    "title" : 'Contactar asesor',
+                    "title" : 'OPC 4.3',
                     "payload" : "OPC11"
                 }]
         },
-        "Corporal" : {
-                "texto" : "Que desea realizar?",
+        "OPC 5" : {
+                "texto" : "Corporal : ¿Que desea realizar? \n\n5.1) Productos \n5.2) Tratamientos \n5.3) Asesoria",
                 "opcion" : [{
-                    "title" : 'Comprar productos',
+                    "title" : 'OPC 5.1',
                     "payload" : "OPC11"
                 },{
-                    "title" : 'Ver tratamientos',
+                    "title" : 'OPC 5.2',
                     "payload" : "OPC12"
                 },{
-                    "title" : 'Contactar asesor',
+                    "title" : 'OPC 5.3',
                     "payload" : "OPC11"
                 }]
         }
